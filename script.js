@@ -29,6 +29,7 @@ function digitalClock() {
         hours = 12
     } else if (hours > 12) {
         seconds = seconds + " pm"
+        hours = hours - 12
     } else {
         seconds = seconds + " am"
     }
