@@ -27,6 +27,10 @@ function digitalClock() {
 
     if (hours == 0) {
         hours = 12
+    } else if (hours > 12) {
+        seconds = seconds + " pm"
+    } else {
+        seconds = seconds + " am"
     }
 
     var clock = hours + " : " + minutes + " : " + seconds
