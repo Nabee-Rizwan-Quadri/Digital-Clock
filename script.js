@@ -2,12 +2,7 @@ function digitalClock() {
     var d = new Date()
 
     var hours = d.getHours()
-    for (var i = 0; i <= 9; i++) {
-        if (hours == i) {
-            hours = "0" + hours
-            break
-        }
-    }
+
 
     var minutes = d.getMinutes()
     for (var i = 0; i <= 9; i++) {
@@ -32,6 +27,13 @@ function digitalClock() {
         hours = hours - 12
     } else {
         seconds = seconds + " am"
+    }
+
+    for (var i = 0; i <= 9; i++) {
+        if (hours == i) {
+            hours = "0" + hours
+            break
+        }
     }
 
     var clock = hours + " : " + minutes + " : " + seconds
